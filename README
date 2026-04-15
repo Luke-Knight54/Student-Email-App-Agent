@@ -1,0 +1,64 @@
+Student Email Agent
+
+A web app that processes emails for students using AI. The app can extract content, categorize emails, and generate polite auto-replies. It consists of a FastAPI backend and a React frontend.
+
+Features: 
+- Extract sender, subject, urgency, deadlines, required actions, and a short summary from emails.
+
+- Categorize emails into predefined categories:
+ 1. Class/Assignment
+ 2. Exam/Quiz/Deadlines
+ 3. Group Project/Collaboration
+ 4. Advising/Scheduling/Office Hours
+ 5. Spam/Low Priority
+ 6. Other
+
+- Generates a professional, polite auto-reply for emails.
+- Allows users to interact with the app in realtime through the Reach frontend. 
+
+Prerequistes:
+ - Python 3.10+
+ - Node.js and npm
+ - OpenAI API key
+
+Dependencies:
+ Backend: 
+ - fastapi
+ - uvicorn
+ - python-dotenv
+ - openai
+ you can just run this to get everything installed: pip install fastapi uvicorn python-dotenv openai
+ Frontend:
+ - react should install everything automatically, so you should be good!
+
+Instructions to get backend up:
+ 1. activate your virtual envornomnent each time you get started in your terminal
+    - .\venv\Scripts\activate
+ 2. Navigate to the backend folder once you have the virtual environment up. Then run Uvicorn, if not installed install it.
+    - cd backend
+    - uvicorn main:app --reload
+    If uvicorn is not installed, install it using: pip install uvicorn
+ 3. Terminal should then provide a link to test to see if the backend is running. However React's frontend already shows this. 
+    - http://127.0.0.1:8000
+
+Instructions for frontend set up: 
+ 1. Navigate to my-app (frontend) in a different terminal from the one used for backend
+    - cd my-app
+ 2. Start up react
+    - npm start
+ If react is not installed run: npm install
+ 3. To check to see if the app is running, the terminal should show something like:
+    - Local: http://localhost:3000 (should be the same)
+    - On Your Network: http://192.168.1.XX:3000 (varies)
+
+How to use:
+ 1. Open the frontend in your browser
+    - http://localhost:3000
+ 2. Paste the email content into the text box
+ 3. Click the "Process Email" button
+ 4. Thats all you have to do!
+
+Some notes to keep in mind:
+    - You must have the frontend and backend running at the same time for the app to work
+    - Make sure your OpenAI API key is in the .env file in the backend folder. I will not be using my personal key because it is sensitive information. 
+    - The backend is made to log information for debugging, so if you have a hard time getting set up, check the logs
