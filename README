@@ -60,5 +60,7 @@ How to use:
 
 Some notes to keep in mind:
     - You must have the frontend and backend running at the same time for the app to work
+    - Create a .env file in the backend folder formatted like this:
+         OPENAI_API_KEY=your_key_here
     - Make sure your OpenAI API key is in the .env file in the backend folder. I will not be using my personal key because it is sensitive information. 
     - The backend is made to log information for debugging, so if you have a hard time getting set up, check the logs
